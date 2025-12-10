@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+venv_*/
+
+
+# VSCode
+*.code-workspace
+
+
+# path ignores
+tmp/
+temp/
+log/
+logs/
+
+
+# file ignores
+.env
+*.env
+*.log
+*.dat
+*.bak
+*.tmp
+*.sql
