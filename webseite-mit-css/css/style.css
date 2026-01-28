@@ -105,3 +105,86 @@ a:visited {
     background: coral;
     box-shadow: 15px 15px 12px black;
 } 
+
+
+.box7 {
+    background-color: goldenrod;
+    color: black;
+    margin: 20px;
+    padding: 12px;
+    border-left: 3px solid red;
+}
+
+.box7:first-child {
+    background-color: green;
+    border-left: 3px solid black;
+}
+
+.box7:last-child {
+    background-color: purple;
+    border-left: 3px solid black;
+}
+
+.box7:nth-child(3) {
+    background-color: yellow;
+    border-left: 3px solid black;
+}
+
+
+.box8 {
+    background-color: pink;
+    color: black;
+    margin: 20px;
+    padding: 12px;
+    border-left: 3px solid purple;
+}
+
+.box8:nth-child(3n-1) {
+    background-color: lightsalmon;
+}
+
+
+.fotobox {
+    background-color: coral;
+    width: 60%;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.foto1 {
+    margin: 20px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.foto2 {
+    margin: 20px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.foto-mit-filter1 {
+    margin: 20px;
+    width: 50%;
+    border-radius: 20px;
+    filter: grayscale(1);
+}
+
+
+.foto-mit-filter2 {
+    margin: 20px;
+    width: 50%;
+    border-radius: 20px;
+    filter: blur(8px) grayscale(1);
+}
+
+.foto-mit-filter2:hover {
+     filter: blur(0px) grayscale(0);
+}
