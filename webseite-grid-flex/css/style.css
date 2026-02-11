@@ -23,3 +23,69 @@ body {
     border: 2px solid green;
     padding: 10px;
 }
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid purple;
+    margin: 20px;
+    padding: 30px;
+    gap: 10px;
+}
+
+.flex-item-1 {
+    border: 2px solid violet;
+    width: 200px;
+    padding: 6px;
+    text-align: center;
+}
+
+.flex-item-2 {
+    border: 2px solid red;
+    width: 400px;
+    padding: 6px;
+    text-align: center;
+}
+
+.box-aussen {
+    position: static;
+    border: 2px solid red;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+}
+
+.box-innen {
+    position: relative;
+    left: 300px;
+    top: -40px;
+    background-color: coral;
+    color: white;
+    padding: 8px;
+    width: 50%;
+}
+
+.box-sticky {
+    position: sticky;
+    top: 0px;
+    background-color: crimson;
+    color: white;
+    font-size: 24px;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+.box-fix {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: rgba(255, 255, 0, 0.7);
+    color: black;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 36px;
+    width: 400px;
+}
