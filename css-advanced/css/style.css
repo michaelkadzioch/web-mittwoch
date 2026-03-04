@@ -1,0 +1,98 @@
+:root {
+    /* hier werden eigene Variabeln erstellt */
+    --global-radius: 14px;
+    --global-width: 50%;
+
+    --btn-width: 100px;
+    --btn-radius: 10px;
+    --btn-padding: 8px;
+
+    --btn-color1: rgb(160, 20, 20);
+    --btn-color2: rgb(180, 20, 40);
+    --btn-color3: rgb(200, 20, 60);
+    --btn-color4: rgb(220, 20, 80);
+    --btn-color5: rgb(240, 20, 100);
+
+    /* --btn-global-color: rgb(200, 20, 60); */
+    --btn-global-color: crimson;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+
+.box1 {
+    margin: 10px;
+    padding: 6px;
+    border: 3px solid red;
+    border-radius: var(--global-radius);
+    width: var(--global-width);
+}
+
+
+.box2 {
+    margin: 10px;
+    padding: 6px;
+    border: 3px solid yellow;
+    border-radius: var(--global-radius);
+    width: calc(var(--global-width) + 200px);
+}
+
+
+.box3 {
+    margin: 10px;
+    padding: 6px;
+    border: 3px solid green;
+    border-radius: var(--global-radius);
+    width: var(--global-width);
+}
+
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    justify-content: center;
+    margin: 24px;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    width: var(--btn-width);
+    border-radius: var(--btn-radius);
+    text-align: center;
+}
+
+.btn-center {
+    width: calc(var(--btn-width) + 50px);
+}
+
+.btn1 {
+    /* bg-color nutzt das hsl-schema, die Werte für h, s, l werden aus der Variabel --btn-global-color ermittelt und berechnet. */
+    background-color: hsl(from var(--btn-global-color) h s calc(l - 30));
+}
+
+.btn2 {
+    background-color: hsl(from var(--btn-global-color) h s calc(l - 20));
+}
+
+.btn3 {
+    background-color: var(--btn-global-color);
+}
+
+.btn4 {
+    background-color: hsl(from var(--btn-global-color) h s calc(l + 20));
+}
+
+.btn5 {
+    background-color: hsl(from var(--btn-global-color) h s calc(l + 30));
+}
