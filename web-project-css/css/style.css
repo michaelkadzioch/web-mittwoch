@@ -1,0 +1,40 @@
+:root {
+    --global-bg-color: #3c3c3c;
+    --global-fg-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../media/bg_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: var(--global-bg-color);
+    color: var(--global-fg-color);
+
+}
+
+
+header {
+    text-align: center;
+}
+
+section.site-navigation {
+    color: yellow;
+}
+
+section.main-content {
+    color: red;
+}
+
+
+footer {
+    background-color: var(--global-bg-color);
+    color: var(--global-fg-color);
+}
