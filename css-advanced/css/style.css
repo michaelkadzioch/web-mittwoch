@@ -18,6 +18,11 @@
     
 }
 
+@font-face{
+    font-family: 'Audiowide';
+    src: url('../fonts/Audiowide-Regular.ttf');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -95,4 +100,55 @@ body {
 
 .btn5 {
     background-color: hsl(from var(--btn-global-color) h s calc(l + 30));
+}
+
+
+.box-font {
+    margin: 10px;
+    padding: 6px;
+    font-size: 2rem;
+    font-family: Audiowide;
+    background-color: red;
+    text-align: left;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+    padding: 40px;
+    border: 3px solid green;
+    gap: 20px;
+}
+
+
+.grid-item {
+    border: 3px solid red;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 1000px)  {
+
+    .box-font {
+        background-color: green;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 800px)  {
+
+    .box-font {
+        background-color: blue;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
