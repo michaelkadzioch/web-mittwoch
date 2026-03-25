@@ -55,11 +55,19 @@ header {
 .headline-item:nth-child(odd) {
     background-color: crimson;
     transform: rotate(8deg);
+    animation-name: drop-in-odd;
+    animation-duration: 600ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .headline-item:nth-child(even) {
     background-color: lightgreen;
     transform: rotate(-8deg);
+    animation-name: drop-in-even;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 
@@ -72,6 +80,12 @@ section.site-navigation {
     color: var(--global-fg-color);
     gap: 12px;
     padding: 12px;
+}
+
+section.phone-navigation {
+    display: none;
+    background-color: steelblue;
+    padding: 24px;
 }
 
 .nav-item {
@@ -92,7 +106,26 @@ section.site-navigation {
 }
 
 section.main-content {
-    color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px;
+    gap: 30px;
+}
+
+.content-item {
+    color: var(--global-bg-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    animation-name: fade-in;
+    animation-fill-mode: both;
+    animation-timeline: view(50% 5%);
+}
+
+.content-item:hover {
+   background-color: rgba(255, 255, 255, 1);
 }
 
 
@@ -116,6 +149,12 @@ footer {
     grid-column: span 3;
 }
 
+/* Tablet-Größe */
+@media only screen and (max-width: 1200px)  {
+    section.main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 
 /* Smartphone-Größe */
@@ -123,6 +162,18 @@ footer {
 
     .headline-item {
         font-size: 2.5rem;
+    }
+
+    section.site-navigation {
+        display: none;
+    }
+
+    section.phone-navigation {
+        display: block;
+    }
+
+    section.main-content {
+        grid-template-columns: 1fr;
     }
 
     footer  {
@@ -134,3 +185,52 @@ footer {
     }
 }
 
+
+@keyframes drop-in-odd {
+    0% {
+            transform: translateY(-200px);
+    }
+
+    70% {
+            transform: translateY(30px) rotate(14deg);
+    }
+
+    80% {
+            transform: translateY(-20px) rotate(-6deg);
+    }
+
+    100% {
+            transform: translateY(0px) rotate(8deg);
+    }
+}
+
+
+@keyframes drop-in-even {
+    0% {
+            transform: translateY(-200px);
+    }
+
+    70% {
+            transform: translateY(30px) rotate(-14deg);
+    }
+
+    80% {
+            transform: translateY(-20px) rotate(6deg);
+    }
+
+    100% {
+            transform: translateY(0px) rotate(-8deg);
+    }
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
